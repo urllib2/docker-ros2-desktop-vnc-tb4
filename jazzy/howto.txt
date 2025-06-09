@@ -1,3 +1,10 @@
+#Ubuntu
 docker build -t ros2-tb4-vnc .
 
 docker run -it --rm -p 6080:80 --privileged ros2-tb4-vnc
+
+#Windows11
+docker build -t ros-desktop-working .
+
+docker run -d --rm -p 6901:80 --shm-size=1g --name my-ros-container --security-opt seccomp=unconfined --cap-add=SYS_ADMIN ros-desktop-working
+
