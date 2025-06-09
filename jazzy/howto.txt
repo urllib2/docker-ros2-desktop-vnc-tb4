@@ -8,3 +8,12 @@ docker build -t ros-desktop-working .
 
 docker run -d --rm -p 6901:80 --shm-size=1g --name my-ros-container --security-opt seccomp=unconfined --cap-add=SYS_ADMIN ros-desktop-working
 
+#VS Code
+1°/ Open the Command Palette:
+2°/ Press Ctrl + Shift + P (or View > Command Palette...).
+3°/ A search bar will appear at the top. Start typing Attach to Running... and select the command:
+Dev Containers: Attach to Running Container...
+4°/ VS Code will show you a list of your currently running containers. Select my-ros-container.
+A new VS Code window will open. This might take a moment the first time as it installs a small VS Code server inside the container.
+
+
